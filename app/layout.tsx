@@ -25,19 +25,19 @@ const spaceMono = Space_Mono({
 export const metadata: Metadata = {
   title: 'Lizzi  Boari | Estudio de Arquitectura',
   description: 'Estudio de arquitectura en Gualeguaychú, Entre Ríos. Especialistas en paisajismo, interiorismo, refacciones y adaptaciones desde 2013.',
-  generator: 'v0.app',
+  generator: 'leoptr-dev',
   icons: {
     icon: [
       {
-        url: '/icon-light-32x32.png',
+        url: '/logo-lizzi-boari.png',
         media: '(prefers-color-scheme: light)',
       },
       {
-        url: '/icon-dark-32x32.png',
+        url: '/logo-lizzi-boari.png',
         media: '(prefers-color-scheme: dark)',
       },
       {
-        url: '/icon.svg',
+        url: '/logo-lizzi-boari.svg',
         type: 'image/svg+xml',
       },
     ],
