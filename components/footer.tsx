@@ -81,13 +81,13 @@ export function Footer() {
             Gualeguaychú, Entre Ríos, Argentina
           </p>
         </div>
-        <a 
-  href="www.leonelpiter.com" 
+       <a 
+  href="https://www.leonelpiter.com" 
   target="_blank" 
   rel="noopener noreferrer"
-  className="font-mono text-xs text-white/50 hover:text-[#C2B280] transition-colors duration-300"
+  className="block text-center font-mono text-sm text-white/60 hover:text-[#C2B280] transition-colors duration-300 mt-4"
 >
-  creado x leoptr-dev
+  CREATED BY LEONEL PITER
 </a>
       </div>
     </footer>
