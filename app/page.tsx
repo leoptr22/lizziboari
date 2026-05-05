@@ -5,6 +5,7 @@ import { About } from "@/components/about"
 import { Contact } from "@/components/contact"
 import { Footer } from "@/components/footer"
 import { WhatsAppButton } from "@/components/whatsapp-button"
+import Projects from "@/components/project"
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
         <Hero />
         <Services />
         <About />
+        <Projects />
         <Contact />
       </main>
       <Footer />
