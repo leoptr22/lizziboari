@@ -14,10 +14,10 @@ const projects = [
     category: "Arquitectura",
     description: "Diseño integral de viviendas y edificios desde cero. Creamos espacios únicos que reflejan la identidad de cada cliente, combinando funcionalidad, estética y sustentabilidad.",
     images: [
-      "/images/projects/casa-rio-1.jpg",
-      "/images/projects/casa-rio-2.jpg",
-      "/images/projects/casa-rio-3.jpg",
-      "/images/projects/casa-rio-4.jpg",
+      "/images/projects/01_01.jpg.jpeg",
+      "/images/projects/01_02.jpg.jpeg",
+      "/images/projects/01_03.jpg.jpeg",
+      "/images/projects/01_04.jpg.jpeg",
     ],
     featured: {
       quote: "Disfrutar el patio, regar las plantas y ver el atardecer desde la terraza",
@@ -33,10 +33,10 @@ const projects = [
     category: "Refacción",
     description: "Transformamos espacios existentes en ambientes renovados y modernos. Desde remodelaciones parciales hasta reformas integrales, respetando la esencia del lugar.",
     images: [
-      "/images/projects/loft-urbano-1.jpg",
-      "/images/projects/loft-urbano-2.jpg",
-      "/images/projects/loft-urbano-3.jpg",
-      "/images/projects/loft-urbano-4.jpg",
+      "/images/reformas/07_01.jpg.jpeg",
+      "/images/reformas/07_02.jpg.jpeg",
+      "/images/reformas/07_03.jpg.jpeg",
+      "/images/reformas/07_04.jpg.jpeg",
     ],
     featured: {
       quote: "Disfrutar el fin de semana, y tirar algo a la parrilla",

@@ -1,66 +1,105 @@
+"use client"
+
+import { useEffect, useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
 
 export function Hero() {
+  const [scale, setScale] = useState(1)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY
+      const maxScroll = 300
+      const minScale = 0.65
+
+      const newScale = Math.max(minScale, 1 - scrollY / maxScroll)
+      setScale(newScale)
+    }
+
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
+
   return (
-    <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image con Overlay Gradual */}
+    <section className="font-futura relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
+      
+      {/* Background */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/hero-architecture.jpg"
-          alt="Arquitectura moderna Lizzi-Boari"
+          src="/images/hero-architecture.jpeg"
+          alt="Arquitectura moderna"
           fill
-          className="object-cover scale-105 animate-fade-in" // Efecto de zoom sutil
+          className="object-cover scale-105 blur-[1.5px]"
           priority
         />
-        {/* Overlay más oscuro en la base para resaltar los botones */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/60" />
+        <div className="absolute inset-0 bg-black/40" />
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-6 text-center text-white">
-        <p className="font-mono text-xs md:text-sm tracking-[0.5em] uppercase mb-8 opacity-80">
+      <div className="relative z-10 w-full px-6 text-center text-white">
+        
+        {/* Ubicación */}
+        <p className="text-[11px] md:text-xs tracking-[0.4em] uppercase mb-10 text-white/60">
           Gualeguaychú, Entre Ríos — Desde 2013
         </p>
-        
-        <h1 className="font-serif leading-tight mb-8">
-          <span className="block text-4xl md:text-6xl lg:text-7xl font-light tracking-tight mb-2">
+
+        {/* Título */}
+        <h1 className="leading-none mb-16">
+          
+          <span className="block text-3xl md:text-5xl lg:text-6xl font-light text-white/80 mb-8">
             Arquitectura
           </span>
-          {/* Aplicando los dos colores y el tamaño aumentado */}
-          <span className="block text-6xl md:text-8xl lg:text-9xl italic font-medium">
-  {/* Lizzi: Gris carbón profundo para contraste sólido */}
-  <span className="text-zinc-500 drop-shadow-sm">Lizzi</span>{' '}
-  
-  {/* Boari: Gris piedra claro para suavizar el conjunto */}
-  <span className="text-zinc-400 drop-shadow-sm">Boari</span>
-</span>
+
+          {/* LOGO SVG */}
+          <div
+            className="mx-auto inline-block transition-transform duration-200"
+            style={{ transform: `scale(${scale})` }}
+          >
+            <Image
+              src="./images/logo.svg"
+              alt="Lizzi Boari Arquitectura"
+              width={600}
+              height={200}
+              className="object-contain"
+              priority
+            />
+          </div>
+
         </h1>
 
-        <p className="font-sans text-lg md:text-xl max-w-xl mx-auto mb-12 opacity-90 leading-relaxed font-light">
-          Diseñamos espacios que transforman la manera en que vivís, trabajás y sentís tu entorno.
+        {/* Descripción */}
+        <p className="text-base md:text-lg max-w-lg mx-auto mb-16 text-white/70 leading-relaxed">
+          Diseñamos espacios que transforman la manera en que vivís,
+          trabajás y sentís tu entorno.
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+        {/* Botones */}
+        <div className="flex flex-col sm:flex-row gap-5 justify-center items-center">
+          
           <Link
             href="#servicios"
-            className="group relative inline-flex items-center justify-center px-10 py-4 bg-white text-black font-mono text-xs tracking-[0.2em] uppercase transition-all hover:bg-lime-500 hover:text-white rounded-sm"
+            className="px-8 py-3 bg-white text-black text-xs tracking-[0.2em] uppercase hover:bg-neutral-200 transition"
           >
             Ver Servicios
           </Link>
+
           <Link
             href="#contacto"
-            className="inline-flex items-center justify-center px-10 py-4 border border-white/50 text-white font-mono text-xs tracking-[0.2em] uppercase hover:bg-white/10 transition-all backdrop-blur-sm rounded-sm"
+            className="px-8 py-3 border border-white/40 text-white text-xs tracking-[0.2em] uppercase hover:bg-white/10 transition"
           >
-            Contactanos
+            Contacto
           </Link>
+
         </div>
       </div>
 
-      {/* Scroll Indicator Mejorado */}
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-3">
-        <span className="font-mono text-[10px] uppercase tracking-[0.3em] opacity-50">Explorar</span>
-        <div className="w-px h-12 bg-gradient-to-b from-white to-transparent" />
+      {/* Scroll */}
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2">
+        <span className="text-[10px] tracking-[0.3em] uppercase text-white/40">
+          Scroll
+        </span>
+        <div className="w-px h-10 bg-gradient-to-b from-white/60 to-transparent" />
       </div>
     </section>
   )

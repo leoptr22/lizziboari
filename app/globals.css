@@ -75,6 +75,17 @@
   --sidebar-ring: oklch(0.439 0 0);
 }
 
+@font-face {
+  font-family: 'FuturaBT';
+  src: url('/fonts/FuturaBkBT.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'FuturaBT', sans-serif;
+}
+
 @theme inline {
   --font-sans: var(--font-sans), 'Inter', system-ui, sans-serif;
   --font-serif: var(--font-serif), 'Playfair Display', Georgia, serif;
