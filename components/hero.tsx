@@ -28,7 +28,7 @@ export function Hero() {
       <div className="absolute inset-0 z-0">
         <Image
           src="/images/hero-architecture.jpeg"
-          alt="Arquitectura moderna"
+          alt="Estudio de arquitectura en Gualeguaychú Entre Ríos"
           fill
           className="object-cover scale-105 blur-[1.5px]"
           priority
@@ -44,21 +44,27 @@ export function Hero() {
           Gualeguaychú, Entre Ríos — Desde 2013
         </p>
 
-        {/* Título */}
+        {/* H1 SEO */}
         <h1 className="leading-none mb-16">
           
           <span className="block text-3xl md:text-5xl lg:text-6xl font-light text-white/80 mb-8">
-            Arquitectura
+            Arquitectura Lizzi Boari
           </span>
 
-          {/* LOGO SVG */}
+          {/* 🔥 TEXTO SEO INVISIBLE */}
+          <span className="sr-only">
+            Estudio de arquitectura en Gualeguaychú Entre Ríos.
+            Proyectos, reformas, dirección de obra y diseño arquitectónico moderno.
+          </span>
+
+          {/* LOGO */}
           <div
             className="mx-auto inline-block transition-transform duration-200"
             style={{ transform: `scale(${scale})` }}
           >
             <Image
-              src="./images/logo.svg"
-              alt="Lizzi Boari Arquitectura"
+              src="/images/logo.svg"
+              alt="Lizzi Boari estudio de arquitectura en Gualeguaychú"
               width={600}
               height={200}
               className="object-contain"
